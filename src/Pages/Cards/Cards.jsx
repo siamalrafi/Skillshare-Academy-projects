@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee ,faStar} from '@fortawesome/free-solid-svg-icons'
+
 
 const Cards = ({ coures }) => {
     const { id, title, author, details, rating, thumbnail_url } = coures;
@@ -20,7 +23,18 @@ const Cards = ({ coures }) => {
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    <ListGroup.Item className='d-flex justify-content-between'>
+                        <div>
+                            <p className='h6'>Author : {author}</p >
+                        </div>
+                        <div>
+                            <p >
+                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                                {rating}
+                            </p>
+                        </div>
+
+                    </ListGroup.Item>
                 </ListGroup>
                 <Card.Body className='d-flex'>
                     <Card.Link href="#">Card Link</Card.Link>
