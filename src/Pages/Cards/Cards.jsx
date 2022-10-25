@@ -3,14 +3,18 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 const Cards = ({ coures }) => {
-    
+    const { id, title, author, details, rating, thumbnail_url } = coures;
     console.log(coures);
+    console.log(title);
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                <Card.Img
+                    className='img-fluid rounded h-50 w-full'
+                    variant="top"
+                    src={thumbnail_url} />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
