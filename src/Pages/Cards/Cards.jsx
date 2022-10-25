@@ -2,13 +2,14 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee ,faStar} from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 const Cards = ({ coures }) => {
     const { id, title, author, details, rating, thumbnail_url } = coures;
-    console.log(coures);
-    console.log(title);
+    // console.log(title);
+
+
     return (
         <div>
             <Card style={{ width: '18rem' }}>

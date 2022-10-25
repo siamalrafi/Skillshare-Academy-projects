@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from '../../Layout/Main/Main';
 import Course from "../../Pages/Course/Course";
+import Details from "../../Pages/Details/Details";
 import Home from "../../Pages/Home/Home";
 import SideNav from "../../Pages/SideNav/SideNav";
 
@@ -28,10 +29,9 @@ export const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/courses-data')
             },
             {
-                path: '/course',
-                element: <Course />,
-                // loader: () => fetch('https://jsonplaceholder.typicode.com/albums')
-            },
+                path: '/details',
+                element: <Details></Details>
+            }
         ]
     }
 ])
