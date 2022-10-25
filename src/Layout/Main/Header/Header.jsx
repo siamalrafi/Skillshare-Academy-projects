@@ -2,31 +2,39 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCake, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
+                <Container className='text-light'>
                     <Navbar.Brand href="/">
                         <FontAwesomeIcon icon={faGraduationCap}></FontAwesomeIcon>
-
-                        Skillshare Academy
+                        <b className='h5'> Skillshare Academy</b>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/courses">Courses</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            
+                            <Nav.Link href="/courses"><b className='h6'>Courses</b></Nav.Link>
+                            <Nav.Link href="/"><b className='h6'>Dark-Theme</b></Nav.Link>
+
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
+                            <Nav.Link href="/blog"><b className='h6'>Blog</b></Nav.Link>
+
+                            <Nav.Link href="/login">
+                                Login
+                            </Nav.Link>
+                            <Nav.Link href="/register">
+                                Register
+                            </Nav.Link>
+
+
+
+                            <Nav.Link href="/profile">
+                                Profle
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
