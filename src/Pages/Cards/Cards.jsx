@@ -16,14 +16,13 @@ const Cards = ({ coures }) => {
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        {details.slice(0, 200) + '...'}
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
-                <Card.Body>
+                <Card.Body className='d-flex'>
                     <Card.Link href="#">Card Link</Card.Link>
                     <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
