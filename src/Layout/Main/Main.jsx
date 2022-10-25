@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Footer from '../../Footer/Footer';
 import SideNav from '../../Pages/SideNav/SideNav';
 import Header from './Header/Header';
