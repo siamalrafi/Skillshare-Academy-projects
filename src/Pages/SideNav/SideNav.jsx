@@ -12,7 +12,6 @@ const SideNav = () => {
     const data = useLoaderData([]);
     // console.log(data);
 
-
     return (
         <div>
             <ButtonGroup className='  w-100 ' vertical>
@@ -22,7 +21,6 @@ const SideNav = () => {
                         key={coures.id}
                     >{coures.title}</Button>)
                 }
-
             </ButtonGroup>
         </div>
     );

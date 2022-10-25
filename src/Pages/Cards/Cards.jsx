@@ -3,13 +3,14 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 
 const Cards = ({ coures }) => {
     const { id, title, author, details, rating, thumbnail_url } = coures;
-    // console.log(title);
+    // console.log(id);
 
-
+    
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -34,12 +35,12 @@ const Cards = ({ coures }) => {
                                 {rating}
                             </p>
                         </div>
-
                     </ListGroup.Item>
                 </ListGroup>
-                <Card.Body className='d-flex'>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
+                <Card.Body className='d-flex justify-content-between'>
+                    <Link to={`/details/${id}`}>Course Details</Link>
+
+                    <Link to='/premium'>Get Premium</Link>
                 </Card.Body>
             </Card>
         </div>
