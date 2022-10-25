@@ -9,7 +9,7 @@ const Home = () => {
             <div className="row ">
                 {
                     data.map(coures =>
-                        <div className="col-lg-6 col-sm" key={coures.id}>
+                        <div className="col-lg-6 mt-5  col-sm" key={coures.id}>
                             <Cards
                                 key={coures.id}
                                 coures={coures}
@@ -17,7 +17,6 @@ const Home = () => {
                             </Cards>
                         </div>)
                 }
-
             </div>
         </div>
     );

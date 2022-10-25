@@ -10,7 +10,7 @@ const Cards = ({ coures }) => {
     const { id, title, author, details, rating, thumbnail_url } = coures;
     // console.log(id);
 
-    
+
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -27,11 +27,12 @@ const Cards = ({ coures }) => {
                 <ListGroup className="list-group-flush">
                     <ListGroup.Item className='d-flex justify-content-between'>
                         <div>
-                            <p className='h6'>Author : {author}</p >
+                            <p className='h6'>
+                                <b>Author : {author}</b></p >
                         </div>
                         <div>
                             <p >
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                                <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
                                 {rating}
                             </p>
                         </div>

@@ -16,7 +16,7 @@ const Details = () => {
 
     return (
         <div>
-            <Card className="mt-2">
+            <Card className="mt-5">
                 <div>
                     <Card.Img variant="top" src={thumbnail_url} />
                 </div>
@@ -30,30 +30,33 @@ const Details = () => {
                     <hr />
                     <ListGroup.Item className='d-flex justify-content-between'>
                         <div>
-                            <p className='h6'>Author : {author}</p >
+                            <b>
+                                <p className='h6'>Author : {author}</p >
+                            </b>                        </div>
+                        <div>
+                            <b>
+                                <p className='h6'>Course Fee : ${courseFee}</p >
+                            </b>
                         </div>
                         <div>
-                            <p className='h6'>Course Fee : ${courseFee}</p >
-                        </div>
-                        <div>
-                            {
-                                rating >= 4 ?
-                                    <>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                    </>
-                                    :
-                                    <>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
-                                    </>
-                            }
-                            {
-                                rating
-                            }
+                            <b>
+                                {
+                                    rating >= 4 ?
+                                        <>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                        </>
+                                        :
+                                        <>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                            <FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon>
+                                        </>
+                                }
+                                {rating}
+                            </b>
                         </div>
                     </ListGroup.Item>
                     <hr />

@@ -1,17 +1,29 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Cards from '../Cards/Cards';
 
 const Course = () => {
 
-    const data = useLoaderData();
-    console.log(data);
+    const coures = useLoaderData();
+    console.log(coures);
 
 
     return (
         <div>
-            <h1>CourseCourseCourse</h1>
-            <h1>CourseCourseCourse</h1>
-            <h1>CourseCourseCourse</h1>
+            <div>
+                <div className="row ">
+                    {
+                        coures.map(coures =>
+                            <div className="col-lg-6 mt-5  col-sm" key={coures.id}>
+                                <Cards
+                                    key={coures.id}
+                                    coures={coures}
+                                >
+                                </Cards>
+                            </div>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
