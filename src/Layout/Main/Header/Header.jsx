@@ -19,8 +19,8 @@ const Header = () => {
     const [checked, setChecked] = useState(false);
     const [radioValue, setRadioValue] = useState('1');
     const radios = [
-        { name: 'Dark', value: '1' },
-        { name: 'Light', value: '2' },
+        { name: 'Lignt', value: '1' },
+        { name: 'Dark', value: '2' },
     ];
 
 
@@ -39,8 +39,8 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container className='text-light'>
                     <Navbar.Brand href="/">
-                        <FontAwesomeIcon icon={faGraduationCap}></FontAwesomeIcon>
-                        <b className='h5'> Skillshare Academy</b>
+                        <FontAwesomeIcon className='text-danger h4' icon={faGraduationCap}></FontAwesomeIcon>
+                        <b className='h5 ms-2'><b>Skillshare Academy</b></b>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
