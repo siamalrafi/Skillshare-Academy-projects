@@ -13,9 +13,10 @@ const auth = getAuth(app);
 
 
 const Register = () => {
-    const { createUser, nameUpdate, googleSignIn } = useContext(AuthContext);
+    const { user, createUser, nameUpdate, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
+
 
     const handleRegister = (event) => {
         event.preventDefault()
@@ -66,6 +67,7 @@ const Register = () => {
             })
     }
 
+    // console.log(user);
 
     return (
         <div className='mt-5 w-75'>

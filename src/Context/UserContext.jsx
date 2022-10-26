@@ -34,40 +34,33 @@ const UserContext = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    // //reset password
-    // const resetPassword = (email) => {
-    //     setLoading(true)
-    //     return sendPasswordResetEmail(auth, email);
-    // }
+
 
     // //sign out
-    // const logOut = () => {
-    //     return signOut(auth);
-    // }
+    const logOut = () => {
+        return signOut(auth);
+    }
 
-    // useEffect(() => {
-    //     const unsubscibe = onAuthStateChanged(auth, (currentUser) => {
-    //         setUser(currentUser);
-    //         setLoading(false)
-    //     })
-    //     return () => {
-    //         unsubscibe();
-    //     }
-    // }, [])
+    useEffect(() => {
+        const unsubscibe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setLoading(false)
+        })
+        return () => {
+            unsubscibe();
+        }
+    }, [])
 
-    // const authInfo = {
-    //     user,
-    //     loading,
-    //     createUser,
-    //     nameUpdate,
-    //     varifyEmail,
-    //     googleSignIn,
-    //     signIn,
-    //     logOut,
-    //     resetPassword,
-    // }
+    const authInfo = {
+        user,
+        loading,
+        createUser,
+        nameUpdate,
+        googleSignIn,
+        signIn,
+        logOut,
+    }
 
-    const authInfo = { user, createUser, nameUpdate, googleSignIn,signIn }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
