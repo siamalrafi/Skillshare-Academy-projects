@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 
 
-const auth = getAuth(app);
 
 
 const Register = () => {

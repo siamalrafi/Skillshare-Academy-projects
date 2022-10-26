@@ -18,10 +18,9 @@ const Header = () => {
 
     const handleLogOut = () => {
         return logOut()
-
     }
 
-    console.log(user);
+    // console.log(user);
 
     return (
         <div>
@@ -40,9 +39,6 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link href="/blog"><b className='h6'>Blog</b></Nav.Link>
-
-
-
                             {
                                 user && user.uid ?
                                     <>
@@ -65,7 +61,6 @@ const Header = () => {
                             }
 
                             <Nav.Link href="/profile"><b className='h6'>
-
                                 {
                                     user?.photoURL && user?.displayName ?
                                         <>
@@ -86,16 +81,6 @@ const Header = () => {
                                 }
 
                             </b></Nav.Link>
-
-
-
-
-
-
-
-
-
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
