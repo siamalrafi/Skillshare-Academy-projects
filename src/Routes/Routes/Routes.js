@@ -10,6 +10,7 @@ import Login from "../../Pages/Login/Login";
 import Profile from "../../Pages/Profile/Profile";
 import Register from "../../Pages/Register/Register";
 import SideNav from "../../Pages/SideNav/SideNav";
+import TramsAndCondition from "../../Pages/TramsAndCondition/TramsAndCondition";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 
@@ -72,6 +73,10 @@ export const routes = createBrowserRouter([
                 path: '/profile',
                 element: <Profile></Profile>,
             },
+            {
+                path: '/register/trams',
+                element: <TramsAndCondition></TramsAndCondition>
+            }
 
         ]
     }

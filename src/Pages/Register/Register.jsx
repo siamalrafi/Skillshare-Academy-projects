@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Register = () => {
     const { user, createUser, nameUpdate, googleSignIn } = useContext(AuthContext);
+    const [accepted, setAccepted] = useState(false);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
 
@@ -62,7 +63,11 @@ const Register = () => {
             })
     }
 
-    // console.log(user);
+    const handleAccept = (event) => {
+        setAccepted(event.target.checked);
+
+
+    }
 
     return (
         <div className='mt-5 w-75'>
@@ -80,15 +85,18 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" />
                 </Form.Group>
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check
+                        onClick={handleAccept}
+                        type="checkbox"
+                        label={<>Accept <Link to='trams'>Trams and Condition</Link></>} />
+                </Form.Group>
+
                 <div>
                     Already have a Account <Link to='/login'>Login</Link>
                 </div>
 
-
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" disabled={!accepted}>
                     Sign Up
                 </Button>
                 <div className=" text-success h4 ">
@@ -104,6 +112,7 @@ const Register = () => {
                     }
                 </div>
             </Form>
+
             <div className='m-5 d-flextext-center'>
                 <div
                     onClick={handleGoogleSignIn}

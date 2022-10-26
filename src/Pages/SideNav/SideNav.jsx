@@ -10,8 +10,8 @@ const SideNav = () => {
 
     const [coures, setCoures] = useState([]);
     const data = useLoaderData([]);
-
     // console.log(data);
+
     return (
         <div>
             <ButtonGroup className='  w-100 ' vertical>
