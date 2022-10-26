@@ -1,13 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
-import app from '../../Firebase/firebase.init';
 import { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Context/UserContext';
 import { Link } from 'react-router-dom';
-
-
 
 
 

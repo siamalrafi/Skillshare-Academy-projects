@@ -5,7 +5,7 @@ import app from '../../Firebase/firebase.init';
 import { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Context/UserContext';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +13,9 @@ const Login = () => {
     const { googleSignIn, signIn, } = useContext(AuthContext);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
+    // const navigate = useNavigate();
+    // const location = useLocation();
+    // const from = location.state?.from?.pathname || "/";
 
 
     const handleRegister = (event) => {
@@ -28,6 +31,7 @@ const Login = () => {
                 const user = result.user;
                 setSuccess('You are successfully Login');
                 console.log(user);
+                // navigate('/')
 
             })
             .catch((error) => {
@@ -77,7 +81,7 @@ const Login = () => {
                     </div>
 
                     <Button variant="primary" type="submit">
-                        Sign Up
+                    Login
                     </Button>
                     <div className=" text-success h4 ">
                         {

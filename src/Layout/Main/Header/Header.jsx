@@ -38,6 +38,7 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
+                            <Nav.Link href="/faq"><b className='h6'>FAQ</b></Nav.Link>
                             <Nav.Link href="/blog"><b className='h6'>Blog</b></Nav.Link>
                             {
                                 user && user.uid ?
@@ -64,13 +65,13 @@ const Header = () => {
                                 {
                                     user?.photoURL && user?.displayName ?
                                         <>
-                                            <span>
-                                                <img
-                                                    title={user?.displayName}
-                                                    className='profile-img rounded-circle'
-                                                    src={user?.photoURL} alt="userphotho" />
 
-                                            </span>
+                                            <img
+                                                title={user?.displayName}
+                                                className='profile-img rounded-circle'
+                                                src={user?.photoURL} alt="userphotho" />
+
+
                                         </>
                                         :
                                         <>
