@@ -21,21 +21,18 @@ const UserContext = ({ children }) => {
         setLoading(true)
         return updateProfile(auth.currentUser, { displayName: name });
     }
-    // const varifyEmail = () => {
-    //     setLoading(true)
-    //     return sendEmailVerification(auth.currentUser)
-    // }
+
 
     // // google sign in 
-    // const googleSignIn = () => {
-    //     setLoading(true)
-    //     return signInWithPopup(auth, googelProvider)
-    // }
+    const googleSignIn = () => {
+        setLoading(true)
+        return signInWithPopup(auth, googelProvider)
+    }
 
-    // const signIn = (email, password) => {
-    //     setLoading(true)
-    //     return signInWithEmailAndPassword(auth, email, password)
-    // }
+    const signIn = (email, password) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
 
     // //reset password
     // const resetPassword = (email) => {
@@ -70,7 +67,7 @@ const UserContext = ({ children }) => {
     //     resetPassword,
     // }
 
-    const authInfo = { user, createUser, nameUpdate }
+    const authInfo = { user, createUser, nameUpdate, googleSignIn,signIn }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

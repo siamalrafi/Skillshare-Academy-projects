@@ -4,7 +4,6 @@ import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase
 import app from '../../Firebase/firebase.init';
 import { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/UserContext';
 import { Link } from 'react-router-dom';
 
@@ -14,9 +13,10 @@ const auth = getAuth(app);
 
 
 const Register = () => {
-    const { createUser, nameUpdate } = useContext(AuthContext);
+    const { createUser, nameUpdate, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
+
     const handleRegister = (event) => {
         event.preventDefault()
 
@@ -49,6 +49,22 @@ const Register = () => {
 
     }
 
+    const handleGoogleSignIn = () => {
+        // console.log('ljdfljs');
+
+        googleSignIn()
+            .then((result) => {
+                // The signed-in user info.
+                const user = result.user;
+                setSuccess('You are successfully Create your Account')
+                console.log(user);
+                // ...
+            })
+            .catch((error) => {
+                setError(error)
+                console.error(error.message)
+            })
+    }
 
 
     return (
@@ -93,10 +109,12 @@ const Register = () => {
             </Form>
             <div className='m-5 d-flextext-center'>
                 <div
-
+                    onClick={handleGoogleSignIn}
                     className='m-3 rounded'>
-                    <Button variant="success"> <FaGoogle /> <span>Google Sign Up</span></Button>
+                    <Button
+                        variant="success"> <FaGoogle /> <span>Google Sign Up</span></Button>
                 </div>
+
                 <div className='m-3 rounded'>
                     <Button variant="success"> <FaGithub /> <span>Github Sign Up</span></Button>
                 </div>
