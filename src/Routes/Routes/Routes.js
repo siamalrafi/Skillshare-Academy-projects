@@ -71,7 +71,11 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: <Profile></Profile>,
+                element:
+                    <PrivateRoutes>
+                        <Profile></Profile>
+                    </PrivateRoutes>
+                ,
             },
             {
                 path: '/register/trams',

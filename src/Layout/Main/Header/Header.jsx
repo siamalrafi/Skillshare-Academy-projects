@@ -70,13 +70,12 @@ const Header = () => {
                                                 title={user?.displayName}
                                                 className='profile-img rounded-circle'
                                                 src={user?.photoURL} alt="userphotho" />
-
-
                                         </>
                                         :
                                         <>
                                             <FontAwesomeIcon
-                                                title={'Please Login'}
+                                            className='text-white'
+                                                title={user?.displayName}
                                                 icon={faUser}></FontAwesomeIcon>
                                         </>
                                 }
