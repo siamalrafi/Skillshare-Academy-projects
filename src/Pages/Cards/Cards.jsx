@@ -40,8 +40,10 @@ const Cards = ({ coures }) => {
                 </ListGroup>
                 <Card.Body className='d-flex justify-content-between'>
                     <Link to={`/details/${id}`}>Course Details</Link>
+                
+                
+                    <Link to={`/premium/${id}`}>Get Premium</Link>
 
-                    <Link to='/premium'>Get Premium</Link>
                 </Card.Body>
             </Card>
         </div>
