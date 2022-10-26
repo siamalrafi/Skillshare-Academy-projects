@@ -26,10 +26,8 @@ const Register = () => {
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
-                // console.log(user);
                 nameUpdate(name, photoURLa)
                     .then(() => {
-                        // Profile updated
                         console.log('Profile updated!');
                         setSuccess('You are successfully Create your Account')
                         // ...
@@ -42,17 +40,14 @@ const Register = () => {
             .catch((error) => {
                 console.log(error);
                 setError(error.message)
-                // ..
             });
 
     }
 
     const handleGoogleSignIn = () => {
-        // console.log('ljdfljs');
 
         googleSignIn()
             .then((result) => {
-                // The signed-in user info.
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
                 console.log(user);
@@ -69,7 +64,6 @@ const Register = () => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
                 console.log(user);
-                // ...
             }).catch((error) => {
                 setError(error)
                 console.error(error.message)
@@ -77,12 +71,8 @@ const Register = () => {
     }
 
 
-
-
     const handleAccept = (event) => {
         setAccepted(event.target.checked);
-
-
     }
 
     return (
