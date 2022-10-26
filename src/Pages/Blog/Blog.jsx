@@ -5,7 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 const Blog = () => {
     return (
         <div>
-            <h1>BlogBlogBlog</h1>
+            <h1 className='text-dark'>Here is Our Blog.</h1>
             <Accordion defaultActiveKey="0" flush>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>
@@ -18,7 +18,7 @@ const Blog = () => {
 
                         If you want know more about CORS and it's policy, you can refer here.                    </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item        >
+                <Accordion.Item    eventKey="1"    >
                     <Accordion.Header>
                         <b>Why are you using firebase ? </b>
                     </Accordion.Header>
@@ -32,7 +32,7 @@ const Blog = () => {
                 </Accordion.Item>
             </Accordion>
             <Accordion>
-                <Accordion.Item eventKey="3">
+                <Accordion.Item eventKey="2">
                     <Accordion.Header>
                         <b>What other options do you have to implement authentication ? </b>
                     </Accordion.Header>
@@ -40,7 +40,7 @@ const Blog = () => {
                         Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item        >
+                <Accordion.Item  eventKey="3"      >
                     <Accordion.Header>
                         <b>How does the private route work ? </b>
                     </Accordion.Header>
