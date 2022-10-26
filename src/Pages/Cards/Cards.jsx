@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
 const Cards = ({ coures }) => {
@@ -39,10 +40,14 @@ const Cards = ({ coures }) => {
                     </ListGroup.Item>
                 </ListGroup>
                 <Card.Body className='d-flex justify-content-between'>
-                    <Link to={`/details/${id}`}>Course Details</Link>
-                
-                
-                    <Link to={`/premium/${id}`}>Get Premium</Link>
+                    <Link to={`/details/${id}`}>
+                        <Button variant="success">Course Details</Button>{' '}
+                    </Link>
+
+
+                    <Link to={`/premium/${id}`}>
+                        <Button variant="success">   Get Premium</Button>{' '}
+                    </Link>
 
                 </Card.Body>
             </Card>

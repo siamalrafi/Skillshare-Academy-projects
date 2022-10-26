@@ -18,9 +18,12 @@ const UserContext = ({ children }) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
-    const nameUpdate = (name) => {
+    const nameUpdate = (name, photoURLa) => {
         setLoading(true)
-        return updateProfile(auth.currentUser, { displayName: name });
+        return updateProfile(auth.currentUser,
+            {
+                displayName: name, photoURL: photoURLa
+            });
     }
 
 
