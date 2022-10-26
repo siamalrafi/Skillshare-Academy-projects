@@ -8,7 +8,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
-    const { googleSignIn, signIn, } = useContext(AuthContext);
+    const { googleSignIn, signIn, githubSignIn } = useContext(AuthContext);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
     const navigate = useNavigate();
@@ -42,7 +42,6 @@ const Login = () => {
 
     }
     const handleGoogleSignIn = () => {
-        // console.log('ljdfljs');
 
         googleSignIn()
             .then((result) => {
@@ -58,6 +57,18 @@ const Login = () => {
                 setError(error)
                 console.error(error.message)
             })
+    }
+    const handleGithubSingIn = () => {
+        githubSignIn()
+            .then((result) => {
+                const user = result.user;
+                setSuccess('You are successfully Create your Account')
+                console.log(user);
+                // ...
+            }).catch((error) => {
+                setError(error)
+                console.error(error.message)
+            });
     }
 
 
@@ -104,7 +115,9 @@ const Login = () => {
                             variant="success"> <FaGoogle /> <span>Google Login</span></Button>
                     </div>
 
-                    <div className='m-3 rounded'>
+                    <div
+                        onClick={handleGithubSingIn}
+                        className='m-3 rounded'>
                         <Button variant="success"> <FaGithub /> <span>Github Login</span></Button>
                     </div>
                 </div>

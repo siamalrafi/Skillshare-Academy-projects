@@ -76,7 +76,7 @@ const Header = () => {
                                         :
                                         <>
                                             <FontAwesomeIcon
-                                                title={user?.displayName}
+                                                title={'Please Login'}
                                                 icon={faUser}></FontAwesomeIcon>
                                         </>
                                 }

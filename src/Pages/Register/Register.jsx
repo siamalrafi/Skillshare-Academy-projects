@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const Register = () => {
-    const { user, createUser, nameUpdate, googleSignIn } = useContext(AuthContext);
+    const { user, createUser, nameUpdate, googleSignIn, githubSignIn } = useContext(AuthContext);
     const [accepted, setAccepted] = useState(false);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
@@ -62,6 +62,21 @@ const Register = () => {
                 console.error(error.message)
             })
     }
+    const handleGithubSingIn = () => {
+        githubSignIn()
+            .then((result) => {
+                const user = result.user;
+                setSuccess('You are successfully Create your Account')
+                console.log(user);
+                // ...
+            }).catch((error) => {
+                setError(error)
+                console.error(error.message)
+            });
+    }
+
+
+
 
     const handleAccept = (event) => {
         setAccepted(event.target.checked);
@@ -121,7 +136,9 @@ const Register = () => {
                         variant="success"> <FaGoogle /> <span>Google Sign Up</span></Button>
                 </div>
 
-                <div className='m-3 rounded'>
+                <div
+                    onClick={handleGithubSingIn}
+                    className='m-3 rounded'>
                     <Button variant="success"> <FaGithub /> <span>Github Sign Up</span></Button>
                 </div>
             </div>
