@@ -3,6 +3,7 @@ import Main from '../../Layout/Main/Main';
 import Blog from "../../Pages/Blog/Blog";
 import Course from "../../Pages/Course/Course";
 import Details from "../../Pages/Details/Details";
+import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Profile from "../../Pages/Profile/Profile";
@@ -14,6 +15,7 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         loader: () => fetch('http://localhost:5000/courses'),
         children: [
             {
