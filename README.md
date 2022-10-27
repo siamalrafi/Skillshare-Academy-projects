@@ -7,7 +7,6 @@ In this platform you can learn something new . Many online course are available 
 Best wish and good luck for you. 
 
 
-
 # Some bullet point -------
 
 1. This is the online educational platform.
