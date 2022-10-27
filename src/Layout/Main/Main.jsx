@@ -5,13 +5,10 @@ import Footer from '../../Footer/Footer';
 import SideNav from '../../Pages/SideNav/SideNav';
 import Header from './Header/Header';
 
-
-
 const Main = () => {
     return (
         <div>
             <Header></Header>
-
             <Container>
                 <Row>
                     <Col lg='4'>
@@ -22,14 +19,7 @@ const Main = () => {
                     </Col>
                 </Row>
             </Container>
-
-
             <Footer></Footer>
-
-
-
-
-
         </div>
     );
 };

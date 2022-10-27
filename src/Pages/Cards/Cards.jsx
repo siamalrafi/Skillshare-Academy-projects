@@ -9,8 +9,6 @@ import { Button } from 'react-bootstrap';
 
 const Cards = ({ coures }) => {
     const { id, title, author, details, rating, thumbnail_url } = coures;
-    // console.log(id);
-
 
     return (
         <div>
@@ -43,12 +41,9 @@ const Cards = ({ coures }) => {
                     <Link to={`/details/${id}`}>
                         <Button variant="success">Course Details</Button>{' '}
                     </Link>
-
-
                     <Link to={`/premium/${id}`}>
                         <Button variant="success">   Get Premium</Button>{' '}
                     </Link>
-
                 </Card.Body>
             </Card>
         </div>

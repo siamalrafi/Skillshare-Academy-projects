@@ -22,7 +22,7 @@ const Register = () => {
         const photoURLa = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password);
+        // console.log(name, email, password);
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
@@ -30,7 +30,6 @@ const Register = () => {
                     .then(() => {
                         console.log('Profile updated!');
                         setSuccess('You are successfully Create your Account')
-                        // ...
                     }).catch((error) => {
                         console.error(error);
                         setError(error.message)
@@ -41,7 +40,6 @@ const Register = () => {
                 console.log(error);
                 setError(error.message)
             });
-
     }
 
     const handleGoogleSignIn = () => {
@@ -51,7 +49,6 @@ const Register = () => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
                 console.log(user);
-                // ...
             })
             .catch((error) => {
                 setError(error)
@@ -70,7 +67,6 @@ const Register = () => {
             });
     }
 
-
     const handleAccept = (event) => {
         setAccepted(event.target.checked);
     }
@@ -83,14 +79,13 @@ const Register = () => {
                     <Form.Control name='name' type="text" placeholder="Enter Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" >
-                    <Form.Label> photoURL </Form.Label>
+                    <Form.Label> PhotoURL </Form.Label>
                     <Form.Control name='photoURL' type="text" placeholder="Enter photoURL" />
                 </Form.Group>
                 <Form.Group className="mb-3" >
                     <Form.Label>Email address</Form.Label>
                     <Form.Control name='email' type="email" placeholder="Enter Email" />
                 </Form.Group>
-
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" />
@@ -101,11 +96,9 @@ const Register = () => {
                         type="checkbox"
                         label={<>Accept <Link to='trams'>Trams and Condition</Link></>} />
                 </Form.Group>
-
                 <div>
                     Already have a Account <Link to='/login'>Login</Link>
                 </div>
-
                 <Button variant="primary" type="submit" disabled={!accepted}>
                     Sign Up
                 </Button>

@@ -8,7 +8,6 @@ import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Premium from "../../Pages/Premium/Premium";
-import Profile from "../../Pages/Profile/Profile";
 import Register from "../../Pages/Register/Register";
 import SideNav from "../../Pages/SideNav/SideNav";
 import TramsAndCondition from "../../Pages/TramsAndCondition/TramsAndCondition";
@@ -20,23 +19,23 @@ export const routes = createBrowserRouter([
         path: '/',
         element: <Main></Main>,
         errorElement: <ErrorPage></ErrorPage>,
-        loader: () => fetch('http://localhost:5000/courses'),
+        loader: () => fetch('https://skillshareacademy-server.vercel.app/courses'),
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://skillshareacademy-server.vercel.app/courses')
 
             },
             {
                 path: '/',
                 element: <SideNav />,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://skillshareacademy-server.vercel.app/courses')
             },
             {
                 path: '/details/:id',
                 element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://skillshareacademy-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/premium/:id',
@@ -44,14 +43,16 @@ export const routes = createBrowserRouter([
                     <PrivateRoutes>
                         <Premium></Premium>
                     </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://skillshareacademy-server.vercel.app/courses/${params.id}`)
 
             },
             {
                 path: '/courses',
                 element:
-                    <PrivateRoutes><Course></Course></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/courses')
+                    <PrivateRoutes>
+                        <Course></Course>
+                    </PrivateRoutes>,
+                loader: () => fetch('https://skillshareacademy-server.vercel.app/courses')
             },
             {
                 path: '/blog',
@@ -71,18 +72,9 @@ export const routes = createBrowserRouter([
                 element: <Login></Login>,
             },
             {
-                path: '/profile',
-                element:
-                    <PrivateRoutes>
-                        <Profile></Profile>
-                    </PrivateRoutes>
-                ,
-            },
-            {
                 path: '/register/trams',
                 element: <TramsAndCondition></TramsAndCondition>
-            }
-
+            },
         ]
     }
 ])

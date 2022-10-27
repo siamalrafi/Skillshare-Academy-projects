@@ -72,6 +72,7 @@ const Login = () => {
     }
 
 
+    
 
     return (
         <div className='mt-5 w-75'>
@@ -86,11 +87,9 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control name='password' type="password" placeholder="Password" />
                     </Form.Group>
-
-                    <div>
+                    <div className='mb-1'>
                         Already have no Account <Link to='/register'>Register</Link>
                     </div>
-
                     <Button variant="primary" type="submit">
                         Login
                     </Button>

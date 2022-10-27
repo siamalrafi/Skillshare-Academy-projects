@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6NZBvC-jOWjOSGN_LmgO6tV9JbOTTy8w",
-  authDomain: "skillshare-academy.firebaseapp.com",
-  projectId: "skillshare-academy",
-  storageBucket: "skillshare-academy.appspot.com",
-  messagingSenderId: "581182626222",
-  appId: "1:581182626222:web:f8a4da20f24228afe3903f"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

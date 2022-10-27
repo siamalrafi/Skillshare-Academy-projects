@@ -26,8 +26,7 @@ const UserContext = ({ children }) => {
             });
     }
 
-
-    // // google sign in 
+    // google sign in 
     const googleSignIn = () => {
         setLoading(true)
         return signInWithPopup(auth, googelProvider)
@@ -43,9 +42,6 @@ const UserContext = ({ children }) => {
         return signInWithPopup(auth, githubProvider)
 
     }
-
-
-
 
     const logOut = () => {
         return signOut(auth);

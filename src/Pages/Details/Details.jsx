@@ -11,8 +11,7 @@ const Details = () => {
     const course = useLoaderData([]);
     const { id, title, author, courseFee, details, rating, thumbnail_url } = course;
 
-
-    console.log(id);
+    // console.log(id);
 
     return (
         <div>

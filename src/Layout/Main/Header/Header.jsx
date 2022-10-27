@@ -11,10 +11,6 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import Button from 'react-bootstrap/Button';
 
 
-
-
-
-
 const Header = () => {
     const [checked, setChecked] = useState(false);
     const [radioValue, setRadioValue] = useState('1');
@@ -22,17 +18,11 @@ const Header = () => {
         { name: 'Lignt', value: '1' },
         { name: 'Dark', value: '2' },
     ];
-
-
-
     const { user, logOut } = useContext(AuthContext);
-
 
     const handleLogOut = () => {
         return logOut()
     }
-
-    // console.log(user);
 
     return (
         <div>
@@ -48,10 +38,7 @@ const Header = () => {
                             <Nav.Link href="/courses"><b className='h5'>Courses</b></Nav.Link>
                             <Nav.Link href="/blog"><b className='h5'>Blog</b></Nav.Link>
                             <Nav.Link href="/faq"><b className='h5'>FAQ</b></Nav.Link>
-
                         </Nav>
-
-
                         <Nav.Link href="/">
                             <ButtonGroup className='me-5'>
                                 {radios.map((radio, idx) => (
@@ -90,15 +77,13 @@ const Header = () => {
                                         <Nav.Link href="/register">
                                             <b className='h5'>Register</b>
                                         </Nav.Link>
-
                                     </>
                             }
 
-                            <Nav.Link href="/profile"><b className='h6'>
+                            <Nav.Link href="/"><b className='h6'>
                                 {
                                     user?.photoURL && user?.displayName ?
                                         <>
-
                                             <img
                                                 title={user?.displayName}
                                                 className='profile-img rounded-circle'
@@ -112,8 +97,8 @@ const Header = () => {
                                                 icon={faUser}></FontAwesomeIcon>
                                         </>
                                 }
-
-                            </b></Nav.Link>
+                            </b>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

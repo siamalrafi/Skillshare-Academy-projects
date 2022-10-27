@@ -53,7 +53,6 @@ const FAQ = () => {
                         <p>
                             Skillshare Academy are Provides various course in reasonable price. The course of this academy are top class. Million people are very interested our courses.
                         </p>
-
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
