@@ -59,11 +59,13 @@ const Login = () => {
             })
     }
     const handleGithubSingIn = () => {
+     
         githubSignIn()
             .then((result) => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
                 console.log(user);
+                navigate(from, { replace: true })
                 // ...
             }).catch((error) => {
                 setError(error)
