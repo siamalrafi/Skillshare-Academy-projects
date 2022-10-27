@@ -19,4 +19,5 @@ const TramsAndCondition = () => {
     );
 };
 
+
 export default TramsAndCondition;
