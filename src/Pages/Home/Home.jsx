@@ -3,7 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import Cards from '../Cards/Cards'
 
 const Home = () => {
+
     const data = useLoaderData();
+    
     return (
         <div>
             <div className="row ">
