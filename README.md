@@ -1,4 +1,4 @@
-# Getting Started with Skillshare Academy.
+# Skillshare Academy.
 
 This project was bootstrapped with Create React App.
 
