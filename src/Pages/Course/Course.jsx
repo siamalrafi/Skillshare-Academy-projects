@@ -7,6 +7,7 @@ const Course = () => {
     const coures = useLoaderData();
 
     return (
+
         <div>
             <div className="row ">
                 {
@@ -23,5 +24,6 @@ const Course = () => {
         </div >
     );
 };
+
 
 export default Course;
