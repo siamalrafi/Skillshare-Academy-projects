@@ -3,6 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 
 const Blog = () => {
+
     return (
         <div>
             <h1 className='text-dark'>Here is Our Blog.</h1>
@@ -44,9 +45,7 @@ const Blog = () => {
                         Private Routes in React Router (also called Protected Routes) require a user being authorized to visit a route (read: page). So if a user is not authorized for a specific page, they cannot access it. The most common example is authentication in a React application where a user can only access the protected pages when they are authorized (which means in this case being authenticated). Authorization goes beyond authentication though. For example, a user can also have roles and permissions which give a user access to specific areas of the application.
                     </Accordion.Body>
                 </Accordion.Item>
-
             </Accordion>
-
 
             <Accordion defaultActiveKey="4" flush>
                 <Accordion.Item        >
