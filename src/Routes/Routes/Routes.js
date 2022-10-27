@@ -14,6 +14,7 @@ import TramsAndCondition from "../../Pages/TramsAndCondition/TramsAndCondition";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 
+
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -74,7 +75,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/register/trams',
                 element: <TramsAndCondition></TramsAndCondition>
-            },
+            }
         ]
     }
 ])
