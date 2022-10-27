@@ -48,7 +48,7 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
-                // console.log(user);
+                console.log(user);
             })
             .catch((error) => {
                 setError(error)
@@ -60,7 +60,7 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
-                // console.log(user);
+                console.log(user);
             }).catch((error) => {
                 setError(error)
                 // console.error(error.message)
