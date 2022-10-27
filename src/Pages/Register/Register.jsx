@@ -23,21 +23,21 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         // console.log(name, email, password);
+
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
                 nameUpdate(name, photoURLa)
                     .then(() => {
-                        console.log('Profile updated!');
                         setSuccess('You are successfully Create your Account')
                     }).catch((error) => {
-                        console.error(error);
+                        // console.error(error);
                         setError(error.message)
                     });
-                console.log(user);
+                // console.log(user);
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 setError(error.message)
             });
     }
@@ -48,7 +48,7 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
-                console.log(user);
+                // console.log(user);
             })
             .catch((error) => {
                 setError(error)
@@ -60,10 +60,10 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setSuccess('You are successfully Create your Account')
-                console.log(user);
+                // console.log(user);
             }).catch((error) => {
                 setError(error)
-                console.error(error.message)
+                // console.error(error.message)
             });
     }
 
@@ -73,6 +73,7 @@ const Register = () => {
 
     return (
         <div className='mt-5 w-75'>
+
             <Form onSubmit={handleRegister} >
                 <Form.Group className="mb-3" >
                     <Form.Label> Name </Form.Label>
