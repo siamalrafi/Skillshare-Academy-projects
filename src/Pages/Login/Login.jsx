@@ -78,7 +78,7 @@ const Login = () => {
                 <Form onSubmit={handleRegister} >
                     <Form.Group className="mb-3" >
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control name='email' type="email" placeholder="Enter Email" />
+                        <Form.Control name='email' type="email" placeholder="Enter Email" required/>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
