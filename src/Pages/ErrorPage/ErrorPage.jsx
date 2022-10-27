@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
+    
     return (
         <div className=''>
             <section className=' flex items-center h-screen p-16 '>
