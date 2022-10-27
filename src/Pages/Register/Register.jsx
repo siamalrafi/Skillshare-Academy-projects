@@ -77,7 +77,7 @@ const Register = () => {
             <Form onSubmit={handleRegister} >
                 <Form.Group className="mb-3" >
                     <Form.Label> Name </Form.Label>
-                    <Form.Control name='name' type="text" placeholder="Enter Name" />
+                    <Form.Control name='name' type="text" placeholder="Enter Full Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" >
                     <Form.Label> PhotoURL </Form.Label>
