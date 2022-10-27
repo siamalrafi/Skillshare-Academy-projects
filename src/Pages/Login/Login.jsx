@@ -38,8 +38,6 @@ const Login = () => {
                 // ...
             });
 
-
-
     }
     const handleGoogleSignIn = () => {
 
@@ -49,9 +47,7 @@ const Login = () => {
                 const user = result.user;
                 setSuccess('You are successfully Login');
                 console.log(user);
-                navigate(from, { replace: true })
-
-                // ...
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 setError(error)
@@ -59,14 +55,14 @@ const Login = () => {
             })
     }
     const handleGithubSingIn = () => {
-     
+
         githubSignIn()
             .then((result) => {
                 const user = result.user;
-                setSuccess('You are successfully Create your Account')
+                setSuccess('You are successfully Login')
                 console.log(user);
-                navigate(from, { replace: true })
-                // ...
+                navigate(from, { replace: true });
+
             }).catch((error) => {
                 setError(error)
                 console.error(error.message)
@@ -74,7 +70,7 @@ const Login = () => {
     }
 
 
-    
+
 
     return (
         <div className='mt-5 w-75'>
