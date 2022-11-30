@@ -12,4 +12,5 @@ Live Website Link : https://skillshare-academy.web.app/details/635753c0970180f5k
 * There are extra facility for the premium users. 
 * The private router are used to protect course secret . Without login people can't get access from the content.
 * For this website already have a Dedicated Server. The server name is Skillshare-Academy-server.
-* The © 2022 Copyright:RHD-Limit.com .
+
+### The © 2022 Copyright:RHD-Limit.com .
