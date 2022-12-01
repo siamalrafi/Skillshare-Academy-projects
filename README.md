@@ -1,6 +1,6 @@
 # Skillshare Academy ---
  
-Live Website Link : https://skillshare-academy.web.app/details/635753c0970180f5kafef5ff
+Live Website Link : https://skillshare-academy.web.app 
 
 ### Introduction : This project was bootstrapped with Create React App. This is the top class online education platform in the world. In this platform you can learn something new . Many online course are available in here. You need to choose and learn adn grow. And specially after every course we give a certificate.To do some thing new and extraordinary enroll any course in this course. Best wish and good luck for you. 
 
